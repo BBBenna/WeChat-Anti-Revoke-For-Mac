@@ -1,0 +1,11 @@
+.DS_Store
+.xcuserstate
+.idea/
+__pycache__/
+*.pyc
+dist/
+*.wechat-anti-revoke.bak
+*.wechat-extension.bak
+WeChatAntiRevokeLoader.dylib
+WeChatExtensionLoader.dylib
+*.log
