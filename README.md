@@ -1,6 +1,6 @@
 # WeChat Anti-Revoke For Mac
 
-macOS 微信消息防撤回工具，当前版本为 `v4.1.9`。
+macOS 微信消息防撤回工具，当前版本为 `v4.1.10`。
 
 仓库地址：
 - https://github.com/lerry903/WeChat-Anti-Revoke-For-Mac
@@ -11,9 +11,9 @@ macOS 微信消息防撤回工具，当前版本为 `v4.1.9`。
 git clone https://github.com/lerry903/WeChat-Anti-Revoke-For-Mac.git
 ```
 
-## 最新版本（v4.1.9）
+## 最新版本（v4.1.10）
 
-**支持微信 4.1.9**，适配微信全新 C++ 架构，通过 DYLD 运行时注入实现防撤回，一键生效。
+**支持微信 4.1.10**，适配微信全新 C++ 架构，通过 DYLD 运行时注入实现防撤回，一键生效。
 
 ### 原理
 
@@ -22,6 +22,7 @@ git clone https://github.com/lerry903/WeChat-Anti-Revoke-For-Mac.git
 ### 适用范围
 
 - macOS 微信 4.1.9（CFBundleVersion: 268602）
+-       微信 4.1.10 (CFBundleVersion: 268824)
 - Apple Silicon（arm64）及 Intel（x86_64）
 
 ### 使用
@@ -56,7 +57,7 @@ macOS 系统自带工具，无需额外安装：
 
   当前版本（4.1.9）的底层架构已完全不同：核心逻辑迁移到 C++ 实现（仅剩 65 个 ObjC 类，而代码段超过 90MB 均为 C++ 且符号已 strip）。撤回处理不再是独立的"删除旧消息"+"插入提示"两步操作，而是将整个消息对象替换为新的视图模型。在纯二进制补丁方式下，无法构造复杂的函数调用链来插入一条新消息到聊天记录中。
 
-4.1.9版本支持原作者：https://github.com/a244573118/WeChatIntercept
+从4.1.9版本开始 copy：https://github.com/a244573118/WeChatIntercept
 ---
 ## 风险说明
 
